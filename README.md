@@ -23,3 +23,21 @@ Thread <thread_num>: RD <address>: <current_value>
 Thread <thread_num>: WR <address>: <current_value>
 
 ```
+
+Example:
+```
+Thread 0: WR 20: 10
+Thread 1: WR 10: 5
+Thread 0: RD 20: 10
+Thread 1: WR 21: 12
+Thread 0: WR 23: 30
+Thread 1: WR 23: 13
+Thread 0: RD 23: 13
+Thread 1: RD 21: 12
+Thread 0: WR 21: 15
+Thread 0: RD 21: 15
+Thread 1: RD 10: 5
+Thread 0: RD 23: 13
+Thread 1: RD 21: 12
+Thread 1: RD 21: 12
+```
